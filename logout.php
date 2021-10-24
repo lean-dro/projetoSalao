@@ -6,5 +6,5 @@ unset($_SESSION['cred']);
 
 session_destroy();
 
-header('location: index.php')
+header('location: login.php')
 ?>

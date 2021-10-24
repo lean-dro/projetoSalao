@@ -7,8 +7,8 @@ $_SESSION['cred'] = $_POST['pw'];
 if (($_SESSION['user'] == 'adm') && ($_SESSION['cred'] == '123')) {
     header('Location: areaRestrita-adm/index.php');
 }else{
-    header('Location: index.php');
-    setcookie('cred-erro', $aviso='Usuário ou senha incorretos.', time()+1);
+    header('Location: login.php');
+    setcookie('cred-erro', $aviso="<p class='text-danger'>Usuário ou senha incorretos.</p>", time()+1);
 }
 
 
