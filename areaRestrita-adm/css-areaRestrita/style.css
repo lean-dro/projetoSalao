@@ -1,15 +1,8 @@
-.form-control{
-    height: 50%;
-}
 .btnlogin{
     height: 50%;
     margin-top: 1%;
 }
-.imagemFundo {
-   background-image: url('../images/testeimagem.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .navbar-brand{
     color: black !important;
     font-weight: bolder;
@@ -19,9 +12,11 @@ a.nav-link{
    color: black !important;
    transition: 0.1s;
 }
+
 .bg-rosa  {
     background-color: #f6cab0!important;
 }
+
 .btn-outline-light {
     color: black;
     background-color: #f6cab0!important;
@@ -29,15 +24,16 @@ a.nav-link{
     
    transition: 0.8s;
 }
+
 .btn-outline-light:hover {
     color: #03989e;
     background-color: white !important;
     border-color: #f6cab0;
     transition: 0.8s;
 }
-
-/* css dos forms */
-
+.dashboard{
+   padding-top: 10%;
+}
 
 .container-login{
     align-items: center;
@@ -63,20 +59,14 @@ a.nav-link{
 .p-login{
     text-align: center;
 }
-
-/* ---- */
-
-.btn-outline-info{
-    background-color: #9EBD75;
+.btn-bgrosa:hover{
+    background-color: #C4A18C;
     color: black;
-    border-color: #9EBD75;
-    transition: 0.8s;
+    border-color: #F1C5A9;
 }
-.btn-outline-info:hover{
-    background-color: white;
-    color: #9EBD75;
-    border-color: #9EBD75;
-    transition: 0.8s;
+.btn-bgrosa:focus{
+    border-color: unset;
+    box-shadow: none;
 }
 
 /* roxo 2b0e64 */
