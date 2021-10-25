@@ -11,7 +11,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="../css-areaRestrita/style.css">
-        <title>Home - Admin</title>
+        <title>Cadastro | Agenda</title>
     </head>
     <body>
       
@@ -19,7 +19,7 @@
         <img class="img-fluid mx-auto d-block mt-2" src="../images-arearestrita/logo-shortcut.png" width="100px">
         <div class="dashboard row">
           <div class="float-start col-lg-6 col-md-12 col-sm-12">
-            <form style="margin-top: -13%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST">
+            <form style="margin-top: -14%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST">
                 <h3 class="text-center">Agendar</h3><br>
                 <div class="mb-3">
                     <label class="form-label">Data:</label>

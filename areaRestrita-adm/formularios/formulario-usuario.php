@@ -11,29 +11,41 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="../css-areaRestrita/style.css">
-        <title>Home - Admin</title>
+        <title>Cadastro | Usuário</title>
     </head>
     <body>
       <div class="container">
-        <h1 class="mt-5 text-center">Logo</h1>
-        <div class="dashboard flex-row">
-          <div class="float-start col-6">
-            <form style="margin-top: -13%; width: 50%;margin-left: 10%;" action="autentica-login.php" method="POST">
-                <h3 style="text-align: center">Login do Cliente</h3><br>
-                <div class="mb-3">
-                    <label class="form-label">Usuário:</label>
-                    <input class="form-control" type="text" name="txtLogin" id="txtLogin">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label mt-2">Senha:</label>
-                    <input class="form-control" type="password" name="txtSenha" id="txtSenha">
-                </div>
-                <div class="d-grid gap-2" style="padding-top: 10px;">
-                    <button type="submit" class="btn btn-primary" value="Login">Acessar</button>
-                </div>
-            </form>
-          </div>
-          <div class="float-end col-6">
+        <img class="img-fluid mx-auto d-block mt-2" src="../images-arearestrita/logo-shortcut.png" width="100px">
+            <div class="dashboard row">
+              <div class="float-start col-lg-6 col-md-12 col-sm-12">
+                <form style="margin-top: -14%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST">
+                    <h3 class="text-center">Usuário</h3><br>
+                    <div class="mb-3">
+                        <label class="form-label">Data:</label>
+                        <input class="form-control" type="date" name="dtAgenda" id="dtAgenda">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label mt-2">Horário:</label>
+                        <input class="form-control" type="time" name="timeAgenda" id="timeAgenda">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label mt-2">ID Cliente:</label>
+                      <input class="form-control" type="text" name="txtCliente" id="txtCliente">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label mt-2">ID Serviço:</label>
+                      <input class="form-control" type="text" name="txtServico" id="txtServico">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label mt-2">ID Usuário:</label>
+                      <input class="form-control" type="text" name="txtUsuario" id="txtUsuario">
+                    </div>
+                    <div class="d-grid gap-2" style="padding-top: 10px;">
+                        <button type="submit" class="btn btn-primary" value="Login">Enviar</button>
+                    </div>
+                </form>
+              </div>
+              <div class="float-end col-lg-6 col-md-12 col-sm-12">
             <div class="container overflow-hidden">
                 <div class="row gy-3">
                   <div class="col-lg-6 col-md-6 col-sm-12">
