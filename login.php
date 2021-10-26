@@ -33,9 +33,9 @@
         </nav>
   
     <div class="container-login">
-        <h3 style="text-align: center">Desfrute ainda mais de nosso site!</h3> 
+        <h3 style="text-align: center; font-family: Century Gothic;">Desfrute ainda mais de nosso site!</h3><br>
         <form  action="autentica-login.php" method="POST">
-            <h3 style="text-align: center">Login do Cliente</h3><br>
+            <h3 style="text-align: center; font-family: Century Gothic;">LOGIN</h3><br>
             <div class="mb-3">
                 <label class="form-label">Usuário:</label>
                 <input class="form-control" type="text" name="txtLogin" id="txtLogin">

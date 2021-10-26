@@ -23,23 +23,23 @@
                 <h3 class="text-center">Agendar</h3><br>
                 <div class="mb-3">
                     <label class="form-label">Data:</label>
-                    <input class="form-control" type="date" name="dtAgenda" id="dtAgenda">
+                    <input class="form-control" type="date" name="dtAgenda" id="dtAgenda"  required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label mt-2">Horário:</label>
-                    <input class="form-control" type="time" name="timeAgenda" id="timeAgenda">
+                    <input class="form-control" type="time" name="timeAgenda" id="timeAgenda" required>
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">ID Cliente:</label>
-                  <input class="form-control" type="text" name="txtCliente" id="txtCliente">
+                  <input class="form-control" type="text" name="txtCliente" id="txtCliente" required>
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">ID Serviço:</label>
-                  <input class="form-control" type="text" name="txtServico" id="txtServico">
+                  <input class="form-control" type="text" name="txtServico" id="txtServico" required>
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">ID Usuário:</label>
-                  <input class="form-control" type="text" name="txtUsuario" id="txtUsuario">
+                  <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" required>
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
                     <button type="submit" class="btn btn-primary" value="Login">Enviar</button>

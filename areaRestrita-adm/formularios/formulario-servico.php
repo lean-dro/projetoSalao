@@ -22,7 +22,7 @@
                 <h3 class="text-center">Serviço</h3><br>
                 <div class="mb-3">
                     <label class="form-label">Descrição serviço:</label>
-                    <input class="form-control" type="text" name="txtServico" id="txtServico">
+                    <input class="form-control" type="text" name="txtServico" id="txtServico" required>
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
                     <button type="submit" class="btn btn-primary" value="Login">Enviar</button>

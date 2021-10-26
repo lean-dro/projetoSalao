@@ -22,15 +22,15 @@
                 <h3 class="text-center">Cliente</h3>
                 <div class="mb-3">
                     <label class="form-label">Nome:</label>
-                    <input class="form-control" type="text" name="txtNome" id="txtNome">
+                    <input class="form-control" type="text" name="txtNome" id="txtNome"  required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label mt-2">CPF:</label>
-                    <input class="form-control" oninput="mascara(this)" type="text" name="txtCpf" id="txtCpf">
+                    <input class="form-control" oninput="mascara(this)" type="text" name="txtCpf" id="txtCpf" required>
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">N° do celular:</label>
-                  <input class="form-control" oninput="mascaraCell(this)" type="text" name="txtCel" id="txtCel">
+                  <input class="form-control" oninput="mascaraCell(this)" type="text" name="txtCel" id="txtCel" required>
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
                     <button type="submit" class="btn btn-primary" value="Login">Enviar</button>

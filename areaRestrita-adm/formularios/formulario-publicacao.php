@@ -21,24 +21,20 @@
             <form style="margin-top: -14%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST">
                 <h3 class="text-center">Publicação</h3><br>
                 <div class="mb-3">
-                    <label class="form-label">Data:</label>
-                    <input class="form-control" type="date" name="dtAgenda" id="dtAgenda">
+                    <label class="form-label">ID usuário:</label>
+                    <input class="form-control" type="text" name="textIdUser" id="textIdUser">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label mt-2">Horário:</label>
-                    <input class="form-control" type="time" name="timeAgenda" id="timeAgenda">
+                    <label class="form-label mt-2">Texto:</label>
+                    <input class="form-control" type="text" name="textPub" id="textPub">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label mt-2">ID Cliente:</label>
-                  <input class="form-control" type="text" name="txtCliente" id="txtCliente">
+                  <label class="form-label mt-2">Foto:</label>
+                  <input class="form-control" type="text" name="txtFoto" id="txtFoto">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label mt-2">ID Serviço:</label>
-                  <input class="form-control" type="text" name="txtServico" id="txtServico">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label mt-2">ID Usuário:</label>
-                  <input class="form-control" type="text" name="txtUsuario" id="txtUsuario">
+                  <label class="form-label mt-2">Categoria:</label>
+                  <input class="form-control" type="text" name="txtCat" id="txtCat">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
                     <button type="submit" class="btn btn-primary" value="Login">Enviar</button>

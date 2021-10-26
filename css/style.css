@@ -1,34 +1,17 @@
 .form-control{
     height: 50%;
 }
-.btnlogin{
-    height: 50%;
-    margin-top: 1%;
-}
-.imagemFundo {
-   background-image: url('../images/testeimagem.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.navbar-brand{
-    color: black !important;
-    font-weight: bolder;
 
-}
-a.nav-link{
-   color: black !important;
-   transition: 0.1s;
-}
 .bg-rosa  {
     background-color: #f6cab0!important;
 }
+
 .btn-outline-light {
     color: black;
     background-color: #f6cab0!important;
-   
-    
-   transition: 0.8s;
+    transition: 0.8s;
 }
+
 .btn-outline-light:hover {
     color: #03989e;
     background-color: white !important;
@@ -38,13 +21,11 @@ a.nav-link{
 
 /* css dos forms */
 
-
 .container-login{
-    align-items: center;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
+    font-family: Century Gothic;
 }
 .container-login form {
     width: 400px !important;
@@ -62,6 +43,7 @@ a.nav-link{
 
 .p-login{
     text-align: center;
+    font-family: Century Gothic;
 }
 
 /* ---- */

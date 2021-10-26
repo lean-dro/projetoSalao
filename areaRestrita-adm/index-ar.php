@@ -15,10 +15,10 @@
     </head>
     <body>
       <div class="container">
-        <h1 class="mt-5 text-center">Logo</h1>
+      <img class="img-fluid mx-auto d-block mt-2" src="images-arearestrita/logo-shortcut.png" width="100px">
         <div class="dashboard flex-row">
           <div class="float-start mt-4 col-6">
-            <h1>Seja bem vindo, Adm. <h2>Utilize o dashboard para controlar o sistema.</h2></h1>
+            <h1 style="font-family: Century Gothic; font-weight: bold;">Seja bem vindo, Adm. <h2 style="font-family: Century Gothic">Utilize o dashboard para controlar o sistema.</h2></h1>
           </div>
           <div class="float-end col-6">
             <div class="container overflow-hidden">

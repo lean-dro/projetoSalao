@@ -50,6 +50,7 @@ a.nav-link{
     margin-left: auto;
     margin-right: auto;
 }
+/* botões em geral */
 .btn {
     background-color: #F1C5A9;
     color: black;
@@ -59,6 +60,7 @@ a.nav-link{
 .p-login{
     text-align: center;
 }
+/* Botão da agenda */
 .btn-bgrosa:hover{
     background-color: #C4A18C;
     color: black;
