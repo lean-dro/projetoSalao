@@ -14,16 +14,12 @@
             body{
                 background-color: #212529!important;
                 color: white;
-            }
-
-
-
-        
+            }        
         </style>
     </head>
     <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark p-md-1 fixed-top ">
+    <nav class="navbar navbar-expand-md navbar-dark p-md-1">
             <div class="container">
                 <a class="navbar-brand" href="index.php"><img id="imgNav" class="logoNav" src="images/logo-papillonT.png" alt="Logo do site" width="200px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +56,6 @@
             </div>
         </form>
 
-        <br><p class="p-login">Não tem cadastro? <b>Cadastra-se</b></p>
         <br><p class="p-login">Ao continuar com o acesso, você concorda com a nossa <br><b>Política de Privacidade<b></p>
 
         <?php
