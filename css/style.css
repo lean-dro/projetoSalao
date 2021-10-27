@@ -6,19 +6,6 @@
     background-color: #f6cab0!important;
 }
 
-.btn-outline-light {
-    color: black;
-    background-color: #f6cab0!important;
-    transition: 0.8s;
-}
-
-.btn-outline-light:hover {
-    color: #03989e;
-    background-color: white !important;
-    border-color: #f6cab0;
-    transition: 0.8s;
-}
-
 /* css dos forms */
 
 .container-login{
@@ -28,6 +15,7 @@
     font-family: Century Gothic;
 }
 .container-login form {
+    
     width: 400px !important;
     padding: 20px !important;
     border: 1px solid #03989E !important;
@@ -60,6 +48,7 @@
     border-color: #9EBD75;
     transition: 0.8s;
 }
+/* conteudo */
 
 /* roxo 2b0e64 */
 /* verde 03989e */

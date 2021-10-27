@@ -13,50 +13,33 @@
         <title>Home - Studio Papillon | Salão de Beleza</title>
     </head>
     <body>
-    <header>
-        <div class="menu-toggle" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="overlay"></div>
-        <div class="container-nav">
-            <nav>
-                <h1 class="brand"><a href="index.html">Br<span>a</span>nd</a></h1>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+        <nav class="navbar navbar-expand-md navbar-dark p-md-1 fixed-top ">
+            <div class="container">
+                <a class="navbar-brand" href="index.php"><img id="imgNav" class="logoNav" src="images/logo-papillonT.png" alt="Logo do site" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="mx-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#Servicos">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Galeria">Galeria</a></li>
+                        <li class="nav-item me-5"><a class="nav-link" href="#Sobre">Sobre nós</a></li>
+                    </ul>  
+                    <a href="login.php"><button class="btn btn-outline-light shadow">Login</button></a>
+                </div>
+            </div>
+        </nav>
+
+        <img class=" img-fluid"  src="images/essa.jpg" alt="" srcset="">
+
+        
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        var open = document.getElementById('hamburger');
-        var changeIcon = true;
-
-        open.addEventListener("click", function(){
-
-            var overlay = document.querySelector('.overlay');
-            var nav = document.querySelector('nav');
-            var icon = document.querySelector('.menu-toggle i');
-
-            overlay.classList.toggle("menu-open");
-            nav.classList.toggle("menu-open");
-
-            if (changeIcon) {
-                icon.classList.remove("fa-bars");
-                icon.classList.add("fa-times");
-
-                changeIcon = false;
-            }
-            else {
-                icon.classList.remove("fa-times");
-                icon.classList.add("fa-bars");
-                changeIcon = true;
-            }
-        });
-        </script>
+    <script type="text/javascript" src="js/script.js">
+    </script>
     </body>
 </html>

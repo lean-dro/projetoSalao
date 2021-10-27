@@ -8,33 +8,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">    
+        <link rel="stylesheet" href="css/nav.css">   
         <title>Login - Studio Papillon</title>
+        <style>
+            body{
+                background-color: #212529!important;
+                color: white;
+            }
+
+
+
+        
+        </style>
     </head>
     <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-rosa p-md-3">
+    <nav class="navbar navbar-expand-md navbar-dark p-md-1 fixed-top ">
             <div class="container">
-                <img class="img-fluid" src="images/" alt="Logo do site" width="55%">
+                <a class="navbar-brand" href="index.php"><img id="imgNav" class="logoNav" src="images/logo-papillonT.png" alt="Logo do site" width="200px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="mx-auto"></div>
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="http://">Serviços</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://">Produtos</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://">Galeria</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://">Sobre nós</a></li>
+                        <li class="nav-item me-5"><a class="nav-link" href="http://">Sobre nós</a></li>
                     </ul>  
-                    <div class="mx-auto"></div>
-                    <a href="login.html"></a><button class="btn btn-outline-light shadow">Login</button></a>
+                    <a href="login.php"><button class="btn btn-outline-light shadow">Login</button></a>
                 </div>
             </div>
         </nav>
   
     <div class="container-login">
         <h3 style="text-align: center; font-family: Century Gothic;">Desfrute ainda mais de nosso site!</h3><br>
-        <form  action="autentica-login.php" method="POST">
+        <form action="autentica-login.php" method="POST">
             <h3 style="text-align: center; font-family: Century Gothic;">LOGIN</h3><br>
             <div class="mb-3">
                 <label class="form-label">Usuário:</label>
@@ -61,16 +72,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        var nav = document.querySelector('nav');
 
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 100) {
-            nav.classList.add('bg-rosa', 'shadow', 'transiscao');
-            nav.style.transition = "all 0.8s";
-            } else {
-            nav.classList.remove('bg-rosa', 'shadow');
-            }
-        });
-        </script>
+    </script>
     </body>
 </html>
