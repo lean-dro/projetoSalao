@@ -1,16 +1,19 @@
 .navbar-dark .navbar-nav .nav-link {
-    
+    font-family: Century Gothic;
     font-weight: 500;
     font-size: 20px;
 }
+
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #03989e;
     font-size: 20px;
     font-weight: 650;
 }
+
 .logoNav{
     margin-top: -3%;
 }
+
 .btn-outline-light {
     font-size: 18px;
     color: black;
@@ -22,9 +25,26 @@
     color: #03989e;
     background-color: white !important;
     border-color: #f6cab0;
-    transition: 0.8s;
+    font-family: Century Gothic;
 }
 .navbar-toggler-icon{
     color: black;
 }
 
+
+.bg-white .navbar-toggler-icon {
+    background-color: #f6cab0;
+    border-radius: 5px;
+    transition: all;
+}
+
+@media only screen and (max-width:980px) { 
+    .navbar-nav{
+        text-align: center;
+    }
+    .botaoNavLogin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

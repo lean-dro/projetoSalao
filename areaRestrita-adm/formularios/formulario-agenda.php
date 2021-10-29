@@ -59,7 +59,7 @@
                     <a href="formulario-servico.php"><button class="p-3 w-100 btn btn-Warning"><i class="bi bi-hammer"></i> Cadastrar Serviço</button></a>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
-                    <a href="formulario-publicacao.php"><button class="p-3 w-100 btn btn-Secondary"><i class="bi bi-phone"></i>Cadastrar Publicação</button></a>
+                    <a href="formulario-produto.php"><button class="p-3 w-100 btn btn-Secondary"><i class="bi bi-basket"></i> Cadastrar Produto</button></a>
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <a href="formulario-agenda.php"><button class="p-3 w-100 btn btn-bgrosa"><i class="bi bi-calendar-week"></i> Agendar</button></a>

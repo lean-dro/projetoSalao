@@ -19,7 +19,7 @@
         <div class="dashboard row">
           <div class="float-start col-lg-6 col-md-12 col-sm-12">
             <form style="margin-top: -14%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-produto.php" method="POST">
-                <h3 class="text-center">Publicação</h3><br>
+                <h3 class="text-center">Produto</h3><br>
                 <div class="mb-3">
                     <label class="form-label">ID usuário:</label>
                     <input class="form-control" type="text" name="textIdUser" id="textIdUser">
@@ -33,7 +33,7 @@
                   <input class="form-control" type="text" name="txtFoto" id="txtFoto">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label mt-2">Categoria:</label>
+                  <label class="form-label mt-2">Descrição:</label>
                   <input class="form-control" type="text" name="txtCat" id="txtCat">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
@@ -54,7 +54,7 @@
                     <a href="formulario-servico.php"><button class="p-3 w-100 btn btn-Warning"><i class="bi bi-hammer"></i> Cadastrar Serviço</button></a>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
-                    <a href="formulario-publicacao.php"><button class="p-3 w-100 btn btn-Secondary"><i class="bi bi-phone"></i>Cadastrar Publicação</button></a>
+                    <a href="formulario-produto.php"><button class="p-3 w-100 btn btn-Secondary"><i class="bi bi-basket"></i> Cadastrar Produto</button></a>
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <a href="formulario-agenda.php"><button class="p-3 w-100 btn btn-bgrosa"><i class="bi bi-calendar-week"></i> Agendar</button></a>

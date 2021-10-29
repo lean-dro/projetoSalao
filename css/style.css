@@ -11,17 +11,21 @@
 .container-login{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 3%;
     font-family: Century Gothic;
 }
 .container-login form {
-    
     width: 400px !important;
     padding: 20px !important;
     border: 1px solid #03989E !important;
     border-radius: 10px !important;
     margin-left: auto;
     margin-right: auto;
+}
+@media only screen and (max-width:500px) { 
+    .container-login form {
+        width: 300px !important;
+}
 }
 .btn {
     background-color: #F1C5A9;
@@ -49,6 +53,7 @@
     transition: 0.8s;
 }
 /* conteudo */
+
 
 /* roxo 2b0e64 */
 /* verde 03989e */
