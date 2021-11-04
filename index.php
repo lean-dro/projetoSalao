@@ -12,7 +12,7 @@
         <link rel="shortcut icon" href="">
         <style>
         .banner-image {
-            background-image: url('images/essa.jpg');
+            background-image: url('images/bgHome.jpg');
             background-size: cover;
          }
          .parallax {
