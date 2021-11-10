@@ -15,14 +15,22 @@
     </head>
     <body>
     <div class="container">
-    <img class="img-fluid mx-auto d-block mt-2" src="../images-arearestrita/logo-shortcut.png" width="100px">
+    <a href="../index-ar.php"><img class="img-fluid mx-auto d-block mt-2" src="../images-arearestrita/logo-shortcut.png" width="100px"></a>
         <div class="dashboard row">
           <div class="float-start col-lg-6 col-md-12 col-sm-12">
-            <form style="margin-top: -3%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST">
+            <form style="margin-top: -15%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST" enctype="multipart/form-data">
                 <h3 class="text-center">Serviço</h3><br>
                 <div class="mb-3">
-                    <label class="form-label">Descrição serviço:</label>
+                    <label class="form-label">Descrição do serviço:</label>
                     <input class="form-control" type="text" name="txtServico" id="txtServico" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Texto:</label>
+                    <input class="form-control" type="text" name="txtTexto" id="txtTexto" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Foto do serviço:</label>
+                    <input class="form-control" type="file" name="fileFoto" id="fileFoto" required>
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
                     <button type="submit" class="btn btn-primary" value="Login">Enviar</button>
