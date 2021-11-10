@@ -1,6 +1,5 @@
 <?php
-    require_once("model/Cliente.php");
-    header('Location: indexRestrito.php');
+    require_once('../models/Cliente.php');
 
     $cliente = new Cliente();
     
@@ -8,8 +7,7 @@
     
     $cliente->setCpfCliente($_POST['txtCpf']);
     
-    $cliente->setCelularCliente($_POST['txtCelular']);
-    
+    $cliente->setCelularCliente($_POST['txtCel']);
 
-
+    $cliente->cadastro($cliente);
 ?>
