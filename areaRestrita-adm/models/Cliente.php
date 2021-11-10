@@ -1,4 +1,5 @@
 <?php 
+require_once('Conexao.php');
 class Cliente {
     private $idCliente;
     private $nomeCliente;
@@ -29,18 +30,32 @@ class Cliente {
     public function setCelularCliente($celular){
         $this->celularCilente = $celular;
     }
-    public function gtCelularCliente(){
+    public function getCelularCliente(){
         return $this->celularCilente;
     }
+   
+   
+    public function cadastro($cliente){
+       $conexao = Conexao :: conectar();
+       $stmt = $conexao->prepare("INSERT INTO tbCliente (nomeCliente, cpfCliente, celularCliente)
+                                VALUES(?,?,?)");
+        
+        $stmt->bindValue(1, $cliente->getNomeCliente());
+        $stmt->bindValue(2, $cliente->getCpfCliente());
+        $stmt->bindValue(3, $cliente->getCelularCliente());
+        $stmt->execute();
+    }
 
-    //Sem conexão por enquanto
-
-    
-
-
-
+    public function listar(){
+        $conexao = Conexao::conectar();
+        $querySelect = "SELECT nomeCliente, cpfCliente, celularCliente FROM tbcliente";
+        $resultado = $conexao->query($querySelect);
+        $lista = $resultado->fetchAll();
+        return $lista;   
+    }
 
 }
+
 
 
 ?>
