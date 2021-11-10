@@ -15,7 +15,7 @@
     </head>
     <body>
       <div class="container">
-      <img class="img-fluid mx-auto d-block mt-2" src="images-arearestrita/logo-shortcut.png" width="100px">
+       <img class="img-fluid mx-auto d-block mt-2" src="images-arearestrita/logo-shortcut.png" width="100px">
         <div class="dashboard flex-row">
           <div class="float-start mt-4 col-6">
             <h1 style="font-family: Century Gothic; font-weight: bold;">Seja bem vindo, Adm. <h2 style="font-family: Century Gothic">Utilize o dashboard para controlar o sistema.</h2></h1>
