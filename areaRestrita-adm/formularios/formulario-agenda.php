@@ -1,5 +1,5 @@
 <?php 
-        include_once ('../sentinela.php'); 
+        include_once ('../sentinela-form.php'); 
 ?>
 <html lang="pt-BR">
     <head>
@@ -31,15 +31,21 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">ID Cliente:</label>
-                  <input class="form-control" type="text" name="txtCliente" id="txtCliente" required>
+                  <select name="sl" id="" disabled="disabled">
+
+                  </select>
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">ID Serviço:</label>
-                  <input class="form-control" type="text" name="txtServico" id="txtServico" required>
+                  <select name="sl" id="" disabled="disabled">
+
+                  </select>
                 </div>
                 <div class="mb-3">
                   <label class="form-label mt-2">ID Usuário:</label>
-                  <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" required>
+                  <select name="sl" id="" disabled="disabled">
+
+                  </select>
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
                     <button type="submit" class="btn btn-primary" value="Login">Enviar</button>
