@@ -37,10 +37,6 @@ var li4 = document.querySelector("#navbarSupportedContent > ul > li:nth-child(4)
                 li4.style.color = "white";
             }
         });
-window.scroll({
-        top: 1000, // Captura a distancia do topo onde deseja ser rolado
-        left: 0,// Faz o mesmo do top mas em um ambito horizontal
-        behavior: 'smooth' // Aqui eh onde vem toda a magica, ele suporta duas opcoes, o `smooth` e o `normal`
-})
+
 
 
