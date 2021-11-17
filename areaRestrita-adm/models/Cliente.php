@@ -48,7 +48,7 @@ class Cliente {
 
     public function listar(){
         $conexao = Conexao::conectar();
-        $querySelect = "SELECT nomeCliente, cpfCliente, celularCliente FROM tbcliente";
+        $querySelect = "SELECT idCliente, nomeCliente, cpfCliente, celularCliente FROM tbcliente";
         $resultado = $conexao->query($querySelect);
         $lista = $resultado->fetchAll();
         return $lista;   

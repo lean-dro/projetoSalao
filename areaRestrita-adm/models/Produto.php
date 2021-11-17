@@ -1,13 +1,14 @@
 <?php
 require_once('Conexao.php');
+require_once('Usuario.php');
 class Produto{
-    private $idUsuario;
     private $textoProduto;
     private $fotoProduto;
-    private $descProduto; 
+    private $descProduto;
+    private $usuario; 
 
-    public function setIdUsuario($idUsuario){
-        $this->idUsuario = $idUsuario;
+    public function setUsuario($usuario){
+        $this->usuario = $usuario;
     }
     public function setTexto($textoProduto){
         $this->textoProduto = $textoProduto;
@@ -20,8 +21,8 @@ class Produto{
     }
 
     
-    public function getIdUsuario(){
-        return $this->idUsuario;
+    public function getUsuario(){
+        return $this->usuario;
     }
 
     public function getTexto(){
@@ -42,7 +43,7 @@ class Produto{
                             VALUES (?, ?, ?, ?)");
        $stmt->bindValue(1, $produto->getDesc());
        $stmt->bindValue(2, $produto->getFoto());
-       $stmt->bindValue(3, $produto->getIdUsuario());
+       $stmt->bindValue(3, $produto->getUsuario()->getIdUsuario());
        $stmt->bindValue(4, $produto->getTexto());
        $stmt->execute();
     }

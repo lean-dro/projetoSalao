@@ -47,7 +47,7 @@ class Servico{
 
         public function listar(){
             $conexao = Conexao::conectar();
-            $querySelect = "SELECT idservico, descservico, textoservico, fotoservico FROM tbservico";
+            $querySelect = "SELECT idServico, descServico, textoServico, fotoServico FROM tbservico";
             $resultado = $conexao->query($querySelect);
             $lista = $resultado->fetchAll();
             return $lista;   

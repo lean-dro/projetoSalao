@@ -41,10 +41,10 @@ class Usuario{
     public function cadastrar($usuario){
         $con = Conexao :: conectar();
         $stmt = $con->prepare("INSERT INTO tbusuario(nomeUsuario, loginUsuario, senhaUsuario)
-                                VALUES(?,?,?,?)");
-        $stmt->bindValue(1,$usuario->getNomeUsuario());
-        $stmt->bindValue(2,$usuario->getLoginUsuario());
-        $stmt->bindValue(3,$usuario->getSenhaUsuario());
+                                VALUES(?,?,?)");
+        $stmt->bindValue(1, $usuario->getNomeUsuario());
+        $stmt->bindValue(2, $usuario->getLoginUsuario());
+        $stmt->bindValue(3, $usuario->getSenhaUsuario());
         $stmt->execute();        
     }
 
