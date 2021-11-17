@@ -18,7 +18,7 @@
     <a href="../index-ar.php"><img class="img-fluid mx-auto d-block mt-2" src="../images-arearestrita/logo-shortcut.png" width="100px"></a>
         <div class="dashboard row">
           <div class="float-start col-lg-6 col-md-12 col-sm-12">
-            <form style="margin-top: -15%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-agendamento.php" method="POST" enctype="multipart/form-data">
+            <form style="margin-top: -15%; width: 50%;margin-left: 25%;" action="../cadastros/cadastrar-servico.php" method="POST" enctype="multipart/form-data">
                 <h3 class="text-center">Serviço</h3><br>
                 <div class="mb-3">
                     <label class="form-label">Descrição do serviço:</label>
@@ -30,10 +30,10 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Foto do serviço:</label>
-                    <input class="form-control" type="file" name="fileFoto" id="fileFoto" required>
+                    <input class="form-control" type="file" name="fotoServico" id="fotoServico" required>
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 10px;">
-                    <button type="submit" class="btn btn-primary" value="Login">Enviar</button>
+                    <button type="submit" class="btn btn-primary mb-5" value="Login">Enviar</button>
                 </div>
             </form>
           </div>
@@ -41,16 +41,17 @@
             <div class="container overflow-hidden">
                 <div class="row gy-3">
                   <div class="col-lg-6 col-md-6 col-sm-12">
-                    <a href="formulario-usuario.php"><button class="p-3 w-100 btn btn-info"><i class="bi bi-person-plus"></i> Cadastrar Usuário</button></a>
+                    <a href="formulario-usuario.php"><button class="p-3 w-100 btn btn-bgrosa"><i class="bi bi-person-plus"></i> Cadastrar Usuário</button></a>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
-                    <a href="formulario-cliente.php"><button class="p-3 w-100 btn btn-success"><i  class="bi bi-person-circle"></i> Cadastrar Cliente</button></a>
+                    <a href="formulario-cliente.php"><button class="p-3 w-100 btn btn-bgrosa"><i  class="bi bi-person-circle"></i> Cadastrar Cliente</button></a>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
-                    <a href="formulario-servico.php"><button class="p-3 w-100 btn btn-Warning"><i class="bi bi-hammer"></i> Cadastrar Serviço</button></a>
+                    <a href="formulario-servico.php"><button class="p-3 w-100 btn btn-bgrosa"><i class="bi bi-hammer"></i> Cadastrar Serviço</button></a>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
-                  <a href="formulario-produto.php"><button class="p-3 w-100 btn btn-Secondary"><i class="bi bi-basket"></i> Cadastrar Produto</button></a>                  </div>
+                  <a href="formulario-produto.php"><button class="p-3 w-100 btn btn-bgrosa"><i class="bi bi-basket"></i> Cadastrar Produto</button></a>
+                </div>
                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <a href="formulario-agenda.php"><button class="p-3 w-100 btn btn-bgrosa"><i class="bi bi-calendar-week"></i> Agendar</button></a>
                   </div>
