@@ -1,6 +1,8 @@
 <?php 
     require_once('../models/Produto.php');
     require_once('../models/Usuario.php');
+    header('location: ../formularios/formulario-produto.php');
+    
     $produto = new Produto();
     $usuario = new Usuario();
     
