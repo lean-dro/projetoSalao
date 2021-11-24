@@ -6,6 +6,9 @@ class Cliente {
     private $cpfCliente;
     private $celularCilente;
 
+    public function setId($idCliente){
+        $this->idCliente = $idCliente;
+    }
     public function getId(){
         return $this->idCliente;
     }
@@ -53,7 +56,13 @@ class Cliente {
         $lista = $resultado->fetchAll();
         return $lista;   
     }
-
+    public function qtd(){
+        $conexao = Conexao::conectar();
+        $queryQtd = "SELECT COUNT(idCliente) as Qtd FROM tbcliente";
+        $resultado = $conexao->query($queryQtd);
+        $lista = $resultado->fetchAll();
+        return $lista;
+    }
 }
 
 

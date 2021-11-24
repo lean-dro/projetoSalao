@@ -54,5 +54,12 @@ class Produto{
         $lista = $resultado->fetchAll();
         return $lista;
     }
+    public function qtd(){
+        $con = Conexao::conectar();
+        $queryQtd = "SELECT COUNT(idProduto) as Qtd FROM tbproduto";
+        $resultado = $con->query($queryQtd);
+        $lista = $resultado->fetchAll();
+        return $lista;
+    }
 }
 ?>

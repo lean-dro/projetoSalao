@@ -52,5 +52,13 @@ class Servico{
             $lista = $resultado->fetchAll();
             return $lista;   
         }
+
+        public function qtd(){
+            $conexao = Conexao::conectar();
+            $queryQtd = "SELECT COUNT(idServico) as Qtd FROM tbservico";
+            $resultado = $conexao->query($queryQtd);
+            $lista = $resultado->fetchAll();
+            return $lista;
+        }
     }
 ?>
