@@ -6,6 +6,32 @@
     background-color: #f6cab0!important;
 }
 
+/* css do conteudo */
+
+.container-conteudo {
+    width: 80%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center;
+}
+
+.titulos-conteudo{
+    font-family: Century-Gothic;
+    font-size: 40px;
+    margin-right: 0;
+}
+
+/* ---- */
+
 /* css dos forms */
 
 .container-login{
@@ -52,10 +78,12 @@
     border-color: #9EBD75;
     transition: 0.8s;
 }
-/* conteudo */
 
 
-/* roxo 2b0e64 */
-/* verde 03989e */
-/* rosa f6cab0 */
-/* verde #9EBD75 */
+/* paleta de cores
+
+roxo: #2B0E64
+azul: #03989E
+laranja: #F1C5A9
+
+*/

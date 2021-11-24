@@ -2,16 +2,15 @@
     font-family: Century Gothic;
     font-weight: 500;
     font-size: 20px;
+    color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #03989e;
-    font-size: 20px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .logoNav{
-    margin-top: -3%;
+    margin-top: 1%;
 }
 
 .btn-outline-light {
@@ -38,6 +37,8 @@
     transition: all;
 }
 
+
+
 @media only screen and (max-width:980px) { 
     .navbar-nav{
         text-align: center;
@@ -48,3 +49,26 @@
         align-items: center;
     }
 }
+/* Créditos: https://www.30secondsofcode.org/css/s/hover-underline-animation */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #03989E;
+    transform-origin: bottom center;
+    transition: transform 0.35s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+  }
