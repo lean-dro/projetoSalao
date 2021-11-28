@@ -94,8 +94,12 @@ a.nav-link{
     background-image: url(../images-arearestrita/setaDireita-svg.svg);
 }
 */
+
  .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon{
     filter: invert(0) grayscale(0);
+}
+.tabela{
+    width: 50%;
 }
 .editar i{
     color: #03989e;
