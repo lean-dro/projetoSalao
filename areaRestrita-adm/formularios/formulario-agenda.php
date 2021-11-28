@@ -1,14 +1,18 @@
 <?php 
         include_once ('../sentinela-form.php'); 
+        require_once ('../models/Agenda.php');
         require_once ('../models/Cliente.php');
         require_once ('../models/Servico.php');
         require_once ('../models/Usuario.php');
 
+
+        $agenda = new Agenda();
         $cliente = new Cliente();
         $servico = new Servico();
         $usuario = new Usuario();
        
         try {
+          $linhaAgenda = $agenda->listar();
           $linhasCliente = $cliente->listar();
           $linhasServico = $servico->listar();
           $linhasUsuario = $usuario->listar();
@@ -26,6 +30,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="../css-areaRestrita/style.css">
+        <style>
+          .tabela{
+            width: 50%;
+          }
+        </style>
         <title>Cadastro | Agenda</title>
     </head>
     <body>
@@ -107,6 +116,107 @@
               </div>
         </div>
         </div>
+      </div>
+
+      <div class="container tabela mt-5">
+        <h1 class="text-center">Agendamentos</h1>
+          
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><b>ID</b></th>
+                <th scope="col"><b>Data</b></th>
+                <th scope="col"><b>Hora</b></th>
+                <th scope="col"><b>Cliente</b></th>
+                <th scope="col"><b>Servico</b></th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <?php foreach($linhaAgenda as $linha){ ?>
+                  <th scope="row"><?php  echo $linha['idAgenda'];?></th>
+                  <td><?php echo $linha['dataAgenda'];?></td>
+                  <td><?php echo $linha['horaAgenda'];?></td>
+                  <td><?php echo $linha['cliente'];?></td>
+                  <td><?php echo $linha['servico'];?></td>
+
+                  <td class="editar"> <i class="bi bi-pencil"></i> 
+                     <!-- Botão de edição -->
+                    <a  style="text-decoration: none;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Editar</a>
+                    <!-- Collapse para edição -->
+                      <div class="collapse" id="collapseExample"> 
+
+                      <div class="position-fixed bottom-0 end-0 p-3 me-3 formularioTab rounded-2 shadow border border-3" style="z-index: 11" >
+                        <button  class="btn-close float-end" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <!-- Formulário para edição -->
+                      <form class="form-floating  text-center" action="../alteracoes/updateAgenda.php" method="post">
+                          </button>
+                        <div class="mb-3">
+                          <label  class="form-label">ID:</label>
+                          <input type="text" class="form-control" name="idAgenda" id="idAgenda">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Data:</label>
+                          <input class="form-control" type="date" name="dtAgenda" id="dtAgenda"  required>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label mt-2">Horário:</label>
+                          <input class="form-control" type="time" name="timeAgenda" id="timeAgenda" required>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label mt-2">Cliente:</label>
+                        <select class="form-select" name="slCliente" id="slCliente" required>
+                          <option selected>-Selecione-</option>
+                          <?php 
+                              foreach ($linhasCliente as $linha){
+                                  echo "<option value=$linha[idCliente]>$linha[nomeCliente]</option>";
+                              }
+                          ?>
+                        </select>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label mt-2">Serviço:</label>
+                          <select class="form-select" name="slServico" id="slServico" required>
+                              <option selected>-Selecione-</option>
+                              <?php 
+                                  foreach ($linhasServico as $linha) {
+                                      echo "<option value=$linha[idServico]>$linha[descServico]</option>";
+                                  }
+                              ?>
+                          </select>
+                        </div>
+                        <button type="submit" class="btn bgazul  shadow float-end">Enviar</button>
+                      </form>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td class="excluir" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                    <i class="bi bi-trash"></i> 
+                    <a class="excluir" style="text-decoration: none;" href="#">
+                    Excluir
+                    </a>
+                  </td>
+                  
+                  <div class="collapse" id="collapseExample2">
+                  <div class="position-fixed bottom-0 end-0 p-3 me-3 formularioTab rounded-2 shadow border border-3" style="z-index: 11" >
+                        <button  class="btn-close float-end" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <!-- Formulário para edição -->
+                      <form class="form-floating  text-center" action="../alteracoes/deleteAgenda.php" method="post">
+                          </button>
+                        <div class="mb-3">
+                          <label class="form-label">ID:</label>
+                          <input type="text" class="form-control" name="idAgenda" id="idAgenda">
+                          <button type="submit" class="btn bgazul  shadow float-end mt-3">Excluir</button>
+                        </div>
+                        </form>
+                  </div>
+                  </div>
+                </tr>
+                  <?php } ?>
+            </tbody>
+          </table>
       </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
