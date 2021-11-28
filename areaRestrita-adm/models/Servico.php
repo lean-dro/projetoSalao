@@ -60,5 +60,33 @@ class Servico{
             $lista = $resultado->fetchAll();
             return $lista;
         }
+        public function update($update){
+            $conexao = Conexao::conectar();
+            
+            $stmt = $conexao->prepare("UPDATE tbservico SET descServico = ?, textoServico = ?, fotoServico = ? WHERE idServico = ?");
+            $stmt->bindValue(1, $update->getDescServico());
+            $stmt->bindValue(2, $update->getTextoServico());
+            $stmt->bindValue(3, $update->getFotoServico());
+            $stmt->bindValue(4 , $update->getIdServico());
+
+            $stmt->execute();
+        }
+    
+        public function delete($delete){
+            $conexao = Conexao::conectar();
+            $stmt = $conexao->prepare("SET FOREIGN_KEY_CHECKS=0;DELETE FROM tbservico WHERE idServico = ?; DELETE FROM tbagenda WHERE idServico = ?;SET FOREIGN_KEY_CHECKS=0;");
+            $stmt->bindValue(1, $delete->getIdServico());
+            $stmt->bindValue(2, $delete->getIdServico());
+
+            
+            $resultado = $conexao->query("SELECT fotoServico FROM tbservico WHERE idServico =".$delete->getIdServico());
+            $lista = $resultado->fetchAll();
+
+            foreach ($lista as $linha) {
+                unlink($linha['fotoServico']);
+            }
+
+            $stmt->execute();
+        }
     }
 ?>

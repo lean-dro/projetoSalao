@@ -63,6 +63,23 @@ class Cliente {
         $lista = $resultado->fetchAll();
         return $lista;
     }
+    public function update($update){
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare("UPDATE tbcliente SET nomeCliente = ?, celularCliente = ? WHERE idCliente = ?");
+        $stmt->bindValue(1 ,$update->getNomeCliente());
+        $stmt->bindValue(2 ,$update->getCelularCliente());
+        $stmt->bindValue(3 ,$update->getId());
+
+        $stmt->execute();
+    }
+    public function delete($delete){
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare("SET FOREIGN_KEY_CHECKS=0;  DELETE FROM tbCliente WHERE idCliente = ?; DELETE FROM tbAgenda WHERE idCliente = ?; SET FOREIGN_KEY_CHECKS=1;");
+        $stmt->bindValue(1 ,$delete->getId());
+        $stmt->bindValue(2 ,$delete->getId());
+
+        $stmt->execute();
+    }
 }
 
 

@@ -56,5 +56,27 @@ class Usuario{
         return $lista;
     }
 
+    public function update($update){
+        $con = Conexao::conectar();
+
+        $stmt = $con->prepare("UPDATE tbusuario SET loginUsuario=?, senhaUsuario = ? WHERE idUsuario = ?");
+
+        $stmt->bindValue(1, $update->getLoginUsuario());
+        $stmt->bindValue(2, $update->getSenhaUsuario());
+        $stmt->bindValue(3, $update->getIdUsuario());
+
+        $stmt->execute();
+
+    }
+
+    public function delete ($delete){
+        $con = Conexao::conectar();
+
+        $stmt = $con->prepare("DELETE FROM tbusuario WHERE idUsuario = ?");
+        $stmt->bindValue(1, $delete->getIdUsuario());
+
+        $stmt->execute();
+    }
+
 }
 ?>

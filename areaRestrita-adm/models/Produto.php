@@ -2,10 +2,18 @@
 require_once('Conexao.php');
 require_once('Usuario.php');
 class Produto{
+    private $idProduto;
     private $textoProduto;
     private $fotoProduto;
     private $descProduto;
     private $usuario; 
+
+    public function setIdProduto($idProduto){
+        $this->idProduto = $idProduto;
+    }
+    public function getIdProduto(){
+        return $this->idProduto;
+    }
 
     public function setUsuario($usuario){
         $this->usuario = $usuario;
@@ -60,6 +68,30 @@ class Produto{
         $resultado = $con->query($queryQtd);
         $lista = $resultado->fetchAll();
         return $lista;
+    }
+    public function update($update){
+        $con = Conexao::conectar();
+        $stmt = $con->prepare("UPDATE tbproduto SET descProduto = ?, textoProduto = ?, fotoProduto = ? WHERE idProduto = ?");
+        $stmt->bindValue(1 , $update->getDesc());
+        $stmt->bindValue(2 , $update->getTexto());
+        $stmt->bindValue(3 , $update->getFoto());
+        $stmt->bindValue(4 , $update->getIdProduto());
+        $stmt->execute();  
+    }
+    public function delete($delete){
+        $con = Conexao::conectar();
+        $stmt = $con->prepare("DELETE FROM tbProduto WHERE idProduto = ?");
+        $stmt->bindValue(1 , $delete->getIdProduto());
+        
+        $query = "SELECT fotoProduto FROM tbproduto WHERE idProduto = ".$delete->getIdProduto();
+        $resultado = $con->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach ($lista as $linha) {
+           unlink($linha['fotoProduto']);
+        }
+
+        $stmt->execute();       
     }
 }
 ?>
