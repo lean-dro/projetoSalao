@@ -72,11 +72,11 @@ $agenda = new Agenda();
     </div>
     
     
-    <div class="">
-
-    </div>
 
     <h1 class="mt-5 h1 text-center">Infos:</h1>
+    <div class="col-lg-12 col-sm-6 col-md-3">
+
+    </div>
     <div id="carouselExampleDark" class="carousel carousel-dark slide mb-3" data-bs-ride="carousel">
       <div class="carousel-inner">
         
@@ -130,21 +130,26 @@ $agenda = new Agenda();
             <img src="images-arearestrita/agenda.jpg" class="card-img-top" >
             <div class="card-body">
               <h5 class="card-title text-center">Agenda</h5>
-              <p class="card-text text-center">A próxima data na agenda é 
-              <?php foreach ($linhaAgenda as $qtdA) {
-              echo $qtdA['Prox'];
-              }?>.</p>
+              <p class="card-text text-center">
+              <?php 
+              foreach ($linhaAgenda as $qtdA) {
+              if ($qtdA['dataAg'] == '' || $qtdA['horaAg'] == '') {
+                  echo 'Sem agendamentos.';
+              }else{
+              echo "A próxima data na agenda é ".$qtdA['dataAg']." às ".$qtdA['horaAg'].".";
+              }
+              }?></p>
             </div>
           </div>
         </div>
       </div>
       <!-- Botões -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev" id="btnCar">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: 03989e; border-radius:5px;"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next" id="btnCar">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: 03989e; border-radius:5px;"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
