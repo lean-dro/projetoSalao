@@ -22,6 +22,12 @@
                 font-weight: 500;
                 font-size: 20px;
             }       
+            .navbar-dark .navbar-nav .nav-link:hover {
+                font-weight: 600;
+                color: black;
+            }
+
+
         </style>
     </head>
     <body>
@@ -36,10 +42,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="mx-auto"></div>
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.php#Servicos">SERVIÇOS</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.php#Produtos">PRODUTOS</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.php#Galeria">GALERIA</a></li>
-                            <li class="nav-item me-md-0 me-lg-5"><a class="nav-link" href="index.php">SOBRE NÓS</a></li>
+                            <li class="nav-item hover-underline-animation"><a class="nav-link" href="index.php#Servicos">SERVIÇOS</a></li>
+                            <li class="nav-item hover-underline-animation"><a class="nav-link" href="index.php#Produtos">PRODUTOS</a></li>
+                            <li class="nav-item hover-underline-animation"><a class="nav-link" href="index.php#Galeria">GALERIA</a></li>
+                            <li class="nav-item me-md-0 me-lg-5 hover-underline-animation"><a class="nav-link" href="index.php">SOBRE NÓS</a></li>
                         </ul>  
                 </div>
             </div>
