@@ -16,6 +16,10 @@ a.nav-link{
 .bg-rosa  {
     background-color: #f6cab0!important;
 }
+.bgazul  {
+    background-color: #03989E!important;
+}
+
 
 .btn-outline-light {
     color: black;
@@ -71,8 +75,58 @@ a.nav-link{
     box-shadow: none;
 }
 
+.btn-bgazul:hover{
+    background-color: #00797e;
+    color: black;
+    border-color: #005255;
+}
+.btn-bgazul:focus{
+    border-color: unset;
+    box-shadow: none;
+}
 
+/* Botões do carrossel */
+/* .carousel-control-prev-icon{
+    background-image: url(../images-arearestrita/setaEsquerda-svg.svg);
+}
+
+.carousel-control-next-icon{
+    background-image: url(../images-arearestrita/setaDireita-svg.svg);
+}
+*/
+ .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon{
+    filter: invert(0) grayscale(0);
+}
+.editar i{
+    color: #03989e;
+} 
+.editar a{
+    color: #03989e;
+} 
+
+.editar a:hover{
+    color: #00797e;
+}
+.editar i:hover{
+    color: #00797e;
+}
+
+.excluir i{
+    color: #ff6862;
+}
+.excluir a{
+    color: #ff6862;
+}
+.excluir i:hover{
+    color: #dc4947
+}
+.excluir a:hover{
+    color: #dc4947
+}
+.formularioTab{
+    background-color: #ffd8bd;
+}
 /* roxo 2b0e64 */
-/* verde 03989e */
+/* azul 03989e */
 /* rosa f6cab0 */
 /* verde #9EBD75 */
