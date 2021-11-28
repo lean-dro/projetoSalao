@@ -67,8 +67,8 @@
                 <p class="fs-4 text-center textCont">Um salão planejado para oferecer todos os serviços
                     voltados à beleza e estética, feminina e masculina.</p>
             </div>
-            <div class="col-lg-6 col-md-12" style="padding-top: 40px;">
-                <img src="images/sobre-salao2.png" width="600px">
+            <div class="col-lg-6 col-md-12 col-sm-12" style="padding-top: 40px;">
+                <img class="img-fluid" src="images/sobre-salao2.png" width="600px">
             </div>
         </div>
 
@@ -104,8 +104,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js">
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
