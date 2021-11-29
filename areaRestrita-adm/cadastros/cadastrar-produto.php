@@ -15,7 +15,7 @@
 
     $nomeArquivo = $_FILES['fotoProduto']['name'];
     $arquivo = $_FILES['fotoProduto']['tmp_name'];
-    $endereco = "../../images/".$nomeArquivo;
+    $endereco = "../../images/produtos/".$nomeArquivo;
     move_uploaded_file($arquivo, $endereco);
     $produto->setFoto($endereco);
     

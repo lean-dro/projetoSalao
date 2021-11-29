@@ -11,7 +11,7 @@
     $nomeArquivo = $_FILES['fotoServico']['name'];
     $arquivo = $_FILES['fotoServico']['tmp_name'];
 
-    $enderecoImagem = "../../images/".$nomeArquivo;
+    $enderecoImagem = "../../images/servicos/".$nomeArquivo;
     move_uploaded_file($arquivo, $enderecoImagem);
 
     $servico->setFotoServico($enderecoImagem);
