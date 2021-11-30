@@ -10,7 +10,7 @@
         header("Location: areaRestrita-adm/index-ar.php"); 
     } else {
         header('Location: login.php');
-        setcookie('cred-erro', $aviso="<p class='text-danger'>Usuário ou senha incorretos.</p>", time()+1);
+        setcookie('cred-erro', $aviso="<center><p class='text-danger'>Usuário ou senha incorretos.</p></center>", time()+1);
     }
 
 ?>
