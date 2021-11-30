@@ -63,6 +63,14 @@ class Servico{
         public function update($update){
             $conexao = Conexao::conectar();
             
+            $resultado = $conexao->query("SELECT fotoServico FROM tbservico WHERE idServico =".$update->getIdServico());
+            $lista = $resultado->fetchAll();
+
+            foreach ($lista as $linha) {
+                unlink($linha['fotoServico']);
+            }
+
+
             $stmt = $conexao->prepare("UPDATE tbservico SET descServico = ?, textoServico = ?, fotoServico = ? WHERE idServico = ?");
             $stmt->bindValue(1, $update->getDescServico());
             $stmt->bindValue(2, $update->getTextoServico());

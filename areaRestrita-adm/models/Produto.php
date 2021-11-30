@@ -71,6 +71,15 @@ class Produto{
     }
     public function update($update){
         $con = Conexao::conectar();
+        
+        $query = "SELECT fotoProduto FROM tbproduto WHERE idProduto = ".$update->getIdProduto();
+        $resultado = $con->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach ($lista as $linha) {
+           unlink($linha['fotoProduto']);
+        }
+        
         $stmt = $con->prepare("UPDATE tbproduto SET descProduto = ?, textoProduto = ?, fotoProduto = ? WHERE idProduto = ?");
         $stmt->bindValue(1 , $update->getDesc());
         $stmt->bindValue(2 , $update->getTexto());
