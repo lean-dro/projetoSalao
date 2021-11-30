@@ -97,7 +97,7 @@ body{
     background-image: url("../images/parallax.jpg");
     min-height: 50%;
   }
-.carousel-control-next-icon{
+.carousel-control-next-icon{        
     background-image: url("../images/seta-Direita.svg");
 }
 .carousel-control-prev-icon{
@@ -105,6 +105,14 @@ body{
 }
 /* width */
 
+.carousel-indicators [data-bs-target]{
+    background-color: #2B0E64;
+}
+.bg-carousel{
+   background-color:  #f1c5a9;
+
+   
+}
 /* paleta de cores
 
 roxo: #2B0E64
