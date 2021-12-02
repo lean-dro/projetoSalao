@@ -37,7 +37,7 @@ class Servico{
 
         public function cadastrar($servico){
             $con = Conexao::conectar();
-            $stmt = $con->prepare("INSERT INTO tbServico(descServico, textoServico, fotoServico) 
+            $stmt = $con->prepare("INSERT INTO tbservico(descServico, textoServico, fotoServico) 
                         VALUES (?, ?, ?)");
             $stmt->bindValue(1, $servico->getDescServico());
             $stmt->bindValue(2, $servico->getTextoServico());

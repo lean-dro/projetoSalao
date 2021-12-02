@@ -97,7 +97,6 @@
         
      }    else {
         setcookie('aviso', $teste="CPF inválido!", time()+1, "/");
-        
      }
     
     

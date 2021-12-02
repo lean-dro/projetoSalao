@@ -40,7 +40,7 @@ class Cliente {
    
     public function cadastro($cliente){
        $conexao = Conexao :: conectar();
-       $stmt = $conexao->prepare("INSERT INTO tbCliente (nomeCliente, cpfCliente, celularCliente)
+       $stmt = $conexao->prepare("INSERT INTO tbcliente (nomeCliente, cpfCliente, celularCliente)
                                 VALUES(?,?,?)");
         
         $stmt->bindValue(1, $cliente->getNomeCliente());
