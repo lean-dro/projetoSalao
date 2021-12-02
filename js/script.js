@@ -40,4 +40,6 @@ var li5 = document.querySelector("#navbarSupportedContent > ul > li:nth-child(5)
 
 
 
-
+function aviso(){
+    alert("Nossa Loja Virtual está em manutenção. Pedimos desculpas pelo transtorno.")
+}

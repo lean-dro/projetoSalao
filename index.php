@@ -124,10 +124,12 @@ foreach ($qtd as $linhaQtd) {
                 <h2 id="Produtos" style="font-size: 38px; font-weight: 600; text-align: left;">PRODUTOS</h2>
             </div>
 
-            <div class="row justify-content-sm-center">
+               <div class="container">
+            <div class="row g-1">
                 <?php foreach ($listaProduto as $linha) { ?>
-                    <div class="col">
-                        <div class="card rounded-bottom shadow" style="width: 18rem;">
+                    <div class="col ">
+                        
+                        <div class="card rounded-bottom shadow mx-sm-auto mx-md-auto" style="width: 22rem;">
                             <img src=<?php echo str_replace("../../", "", $linha['fotoProduto']) ?> alt=<?php echo $linha['descProduto'] ?> class="card-img-top img-fluid">
                             <div class="card-body">
                                 <div class="card-title">
@@ -136,12 +138,14 @@ foreach ($qtd as $linhaQtd) {
                                 <div class="card-text">
                                     <p><?php echo $linha['textoProduto'] ?></p>
                                 </div>
-                                <a href="#" class="btn btn-primary text-uppercase fw-bolder text-white">Comprar</a>
+                                <a class="btn btn-primary text-uppercase fw-bolder text-white" onclick="aviso()">Comprar</a>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                   
 
                 <?php } ?>
+            </div>
             </div>
 
 
