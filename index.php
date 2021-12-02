@@ -31,9 +31,10 @@ foreach ($qtd as $linhaQtd) {
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo-shortcut.png">
     <style>
-        html{
-        scroll-behavior: smooth;
+        html {
+            scroll-behavior: smooth;
         }
+
         .banner-image {
             background-image: url('images/bgHome.jpg');
             background-size: cover;
@@ -118,32 +119,32 @@ foreach ($qtd as $linhaQtd) {
 
         <div id="produtos" class="container-produto">
 
-            <div class="col-lg-12 col-md-12 " style="padding-top: 110px; ">
+            <div class="col-lg-12 col-md-12 col-sm-12" style="padding-top: 110px; ">
                 <div style="width: 140px; height: 3px; background: #03989E; margin-bottom: 15px; margin-left: 5px"></div>
                 <h2 id="Produtos" style="font-size: 38px; font-weight: 600; text-align: left;">PRODUTOS</h2>
             </div>
 
-           
-                <div class="row g-1">
-                    <?php foreach ($listaProduto as $linha) { ?>
-                        <div class="col-lg-3 col-md-6 col-sm-12 ">
-                            <div class="p-1">
-                                <div class="card rounded-bottom shadow mx-sm-auto" style="width: 18rem;">
-                                    <img src=<?php echo str_replace("../../", "", $linha['fotoProduto']) ?> alt=<?php echo $linha['descProduto'] ?> class="card-img-top img-fluid">
-                                    <div class="card-body">
-                                    <div class="card-title">
-                                        <h4 class="fw-bolder"><?php echo $linha['descProduto'] ?></h4>
-                                    </div>
-                                    <div class="card-text">
-                                        <p><?php echo $linha['textoProduto'] ?></p>
-                                    </div>
-                                    <a href="#" class="btn btn-primary text-uppercase fw-bolder text-white">Comprar</a>
-                                    </div>
+            <div class="row justify-content-sm-center">
+                <?php foreach ($listaProduto as $linha) { ?>
+                    <div class="col">
+                        <div class="card rounded-bottom shadow" style="width: 18rem;">
+                            <img src=<?php echo str_replace("../../", "", $linha['fotoProduto']) ?> alt=<?php echo $linha['descProduto'] ?> class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4 class="fw-bolder"><?php echo $linha['descProduto'] ?></h4>
                                 </div>
+                                <div class="card-text">
+                                    <p><?php echo $linha['textoProduto'] ?></p>
+                                </div>
+                                <a href="#" class="btn btn-primary text-uppercase fw-bolder text-white">Comprar</a>
                             </div>
                         </div>
-                    <?php } ?>
-                </div>
+                    </div>
+
+                <?php } ?>
+            </div>
+
+
         </div>
 
         <!--<div class="container-sm">
@@ -159,32 +160,41 @@ foreach ($qtd as $linhaQtd) {
                 <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
 
                     <div class="carousel-inner ">
-                        <div class="carousel-item active ">
-                            <img src="images/carossel1.png" class="d-block w-75  mx-auto img-fluid rounded-2 col-lg-12 col-md-12 col-sm-12" alt="...">
-                            <div class="bg-carousel  col-12 rounded-3 mt-2">
-                                <h5 class="text-dark mx-auto fw-bold fs-3">HAIR STYLIST</h5>
-                                <p class="text-dark mx-auto   ">Corte, mechas, luzes, técnicas de alisamento e coloração. Oferecemos a orientação necessária para resultados do seu agrado.</p>
-                            </div>
+                        <div class="carousel-item active bg-carousel rounded-3 rounded-3">
+                           
+                            
+                            <img src="images/carossel1.png" class="img-fluid  w-50 rounded-3" alt="...">
+
+                            
+                           
+                                    <h5 class="text-dark  fw-bold fs-1">HAIR STYLIST</h5>
+                                    <p   class="text-dark text-center  fs-5 me-5 ms-5">Corte, mechas, luzes, técnicas de alisamento e coloração. Oferecemos a orientação necessária para resultados do seu agrado.</p>
+                            
+                           
 
                         </div>
                         <?php foreach ($listaServico as $linha) { ?>
-                            <div class="carousel-item">
-<img src=<?php echo str_replace("../../", "", $linha['fotoServico']); ?> class="d-block w-75 mx-auto img-fluid rounded-2 col-lg-12 col-md-12 col-sm-12" alt="...">
-                                <div class="bg-carousel col-12   rounded-3 mt-2">
-                                    <h5 class="text-dark mx-auto fs-3 fw-bold"><?php echo $linha['descServico']; ?></h5>
-                                    <p class="text-dark mx-auto "><?php echo $linha['textoServico']; ?></p>
-                                </div>
+                            <div class="carousel-item  bg-carousel rounded-3">
+                               
+                              
+                                <img src=<?php echo str_replace("../../", " ", $linha['fotoServico']); ?> class="img-fluid w-50 rounded-3" alt="...">
+                              
+                              
+                                    <h5 class="text-dark  fw-bold fs-1 text-uppercase"><?php echo $linha['descServico']; ?></h5>
+                                    <p class="text-dark text-center fs-5 me-5 ms-5"><?php echo $linha['textoServico']; ?></p>
+                                
+                                
                             </div>
                         <?php } ?>
 
 
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon " aria-hidden="true" style="color: #03989E; background-color: white;"></span>
+                        <span class="carousel-control-prev-icon opacity-50" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon rounded-2" style="color: #03989E; background-color: white;" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon opacity-50" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
@@ -276,11 +286,11 @@ foreach ($qtd as $linhaQtd) {
 
     <!-- parallax -->
     <div class="parallax">
-        <div class="text-end me-5">   
-            <p style="color: #2B0E64; font-weight: 600;" class="pt-5 me-5 fs-3"><img src="images/telefone.svg" width="32px" alt="Ícone de Telefone" > (11) 2554-6192</p>
-            <p style="color: #2B0E64; font-weight: 600;" class="mt-4 me-5 fs-3"><img src="images/zap.svg" width="32px" alt="Ícone do Whatsapp" > (11) 97242-5346</p>
-            <p style="color: #2B0E64; font-weight: 600;font-size: 15px;" class="mt-4 me-5"><img src="images/email.svg" width="32px" alt="Ícone do Email" > contato@studiopapillon.com</p>
-            <p style="color: #2B0E64; font-weight: 600;" class="mt-4 me-5 fs-3"><img src="images/insta.svg" width="32px" alt="Ícone do Instagram" > @studio.papillon</p>
+        <div class="text-end me-5">
+            <p style="color: #2B0E64; font-weight: 600;" class="pt-5 me-5 fs-3"><img src="images/telefone.svg" width="32px" alt="Ícone de Telefone"> (11) 2554-6192</p>
+            <p style="color: #2B0E64; font-weight: 600;" class="mt-4 me-5 fs-3"><img src="images/zap.svg" width="32px" alt="Ícone do Whatsapp"> (11) 97242-5346</p>
+            <p style="color: #2B0E64; font-weight: 600;font-size: 15px;" class="mt-4 me-5"><img src="images/email.svg" width="32px" alt="Ícone do Email"> contato@studiopapillon.com</p>
+            <p style="color: #2B0E64; font-weight: 600;" class="mt-4 me-5 fs-3"><img src="images/insta.svg" width="32px" alt="Ícone do Instagram"> @studio.papillon</p>
         </div>
     </div>
 
@@ -290,18 +300,19 @@ foreach ($qtd as $linhaQtd) {
             <div class="row">
                 <div class="col-lg-6">
                     <div style="width: 140px; height: 3px; background: #03989E; margin-bottom: 15px; margin-left: 5px"></div>
-                        <h3 style="font-size: 38px; font-weight: 600; text-align: left;"> Fale conosco! Envie 
+                    <h3 style="font-size: 38px; font-weight: 600; text-align: left;"> Fale conosco! Envie
                         <font color="#03989E">sugestões</font> ou solicite um <font color="#03989E">orçamento</font>
-                        pelo formulário.</h3><br>
+                        pelo formulário.
+                    </h3><br>
 
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-12" style="padding: 0 0 0 0;">
-                                <p style="text-align: left;">Rua Felíciano Mendonça, 290 <br> Guaianases, São Paulo - SP</p>
-                            </div>
-                            <div class="col-lg-6 col-sm-12" style="padding: 0 0 0 0;">
-                                <p style="text-align: left;">Abrimos de Terça a Sábado<br><b>08:30 às 19:00</b></p>
-                            </div>
-                        </div>       
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12" style="padding: 0 0 0 0;">
+                            <p style="text-align: left;">Rua Felíciano Mendonça, 290 <br> Guaianases, São Paulo - SP</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12" style="padding: 0 0 0 0;">
+                            <p style="text-align: left;">Abrimos de Terça a Sábado<br><b>08:30 às 19:00</b></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
